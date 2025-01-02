@@ -38,11 +38,11 @@ Each form is styled with CSS for a minimal yet elegant look. JavaScript is used 
 
 ## Folder Structure 
 *Signup-Form-Project*
-    - Signup.html
-    - Signup2.html
-    - Signin.html
-    - Forgot-password.html
-    - Signup.css
+- Signup.html
+- Signup2.html
+- Signin.html
+- Forgot-password.html
+- Signup.css
 
 ## File Descriptions  
 - *Signup.html* – Step 1 of the signup form (Username and Email).  
