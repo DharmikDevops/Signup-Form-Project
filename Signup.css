@@ -8,7 +8,7 @@ body {
 }
 
 .form-container {
-    width: 320px;
+    width: 300px;
     box-sizing: border-box;
     border-radius: 0.75rem;
     background-color: #FBEAEB;
@@ -74,7 +74,14 @@ h2 {
   margin-top: 10px;
 }
 
-.forgot a, .signup a, .back a {
+.forgot a, .signup a {
+  text-decoration: none;
+  font-size: 10px;
+  font-family: sans-serif;
+  color: #2F3C7E;
+}
+
+.back a {
   text-decoration: none;
   font-size: 14px;
   font-family: sans-serif;
@@ -102,7 +109,7 @@ h2 {
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-family: sans-serif;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -128,7 +135,7 @@ h2 {
   margin-top: 2rem;
 }
 
-.signup .signin {
+.signup, .signin {
   text-align: center;
   font-size: 10px;
   font-family: sans-serif;
