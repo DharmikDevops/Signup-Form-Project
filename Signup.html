@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="C:\Users\dharm\Downloads\Docs\Signup.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Sign Up</h2>
+
+        <form class="form" id="signup-form">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="button-container">
+                <button type="button" id="nextButton" onclick="goToNextPage()" class="button">Next</button>
+            </div>
+        </form>
+
+        <p class="signin">Already have an account? 
+            <a href="C:\Users\dharm\Downloads\Docs\Signin.html">Sign In</a> 
+        </p>
+    </div>
+
+    <script>
+        function goToNextPage() {
+            // Get the input values
+            let username = document.getElementById('username').value;
+            let email = document.getElementById('email').value;
+
+            // Validate the username (minimum 3 characters)
+            if (username.trim().length < 3) {
+                alert("Username must be at least 3 characters long.");
+                return; // Prevent the user from going to the next page
+            }
+
+            // Validate the email
+            if (!validateEmail(email)) {
+                alert("Please enter a valid email address.");
+                return; // Prevent the user from going to the next page
+            }
+
+            // If all fields are valid, go to the next page
+            window.location.href = 'signup2.html';
+        }
+
+        // Basic email validation
+        function validateEmail(email) {
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailPattern.test(email);
+        }
+    </script>
+</body>
+</html>

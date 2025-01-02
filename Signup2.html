@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="C:\Users\dharm\Downloads\Docs\Signup.css">
+</head>
+<body>
+    <div class="form-container">
+
+<!--Step 2-->
+<form class="form" id="signup-form">
+    <form action="#">
+        <div class="back">
+        <a rel="noopener noreferrer" href="C:\Users\dharm\Downloads\Docs\Signup.html">Back</a>
+        </div>
+<div class="input-group">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required>
+</div>
+<div class="input-group">
+    <label for="confirm-password">Confirm Password</label>
+    <input type="password" name="confirm-password" id="confirm-password" required>
+</div>
+<button type="submit" class="sign">Sign Up</button>
+</form>
+<p class="signin">Already have an account? 
+<a href="C:\Users\dharm\Downloads\Docs\Signin.html">Sign In</a> 
+</p>
+</div>
+<script>
+    // My code
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function(event) {
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirm-password").value;
+    
+        // Password length validation
+        if (password.length < 6) {
+            alert("Password must be at least 6 characters long.");
+            event.preventDefault();
+            return;
+        }
+    
+        // Confirm password match validation
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            event.preventDefault();
+        }
+    });
+    </script>
+</body>
+</html>
+
